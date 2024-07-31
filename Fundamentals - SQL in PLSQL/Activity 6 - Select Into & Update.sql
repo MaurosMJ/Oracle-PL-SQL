@@ -1,3 +1,5 @@
+--@Author: MaurosMJ
+
 DECLARE
     wpercentual  NUMBER(3);
     wemployee_id employees.employee_id%TYPE;

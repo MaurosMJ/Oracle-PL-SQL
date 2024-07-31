@@ -1,3 +1,5 @@
+--@Author: MaurosMJ
+
 set serveroutput on;
 ACCEPT dept_id PROMPT 'Digite o Id do departamento:';
 
@@ -7,12 +9,12 @@ DECLARE
     wsalarioantigo employees.salary%TYPE;
     wsalarionovo   employees.salary%TYPE;
 BEGIN
-    CASE wdepartment
-        WHEN 80 THEN
+    CASE
+        WHEN wdepartment = 80 THEN
             wpercentual := 10;
-        WHEN 20 THEN
+        WHEN wdepartment = 20 THEN
             wpercentual := 15;
-        WHEN 60 THEN
+        WHEN wdepartment = 60 THEN
             wpercentual := 20;
         ELSE
             wpercentual := 5;

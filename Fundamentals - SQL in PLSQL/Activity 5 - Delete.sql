@@ -1,3 +1,5 @@
+--@Author: MaurosMJ
+
 DECLARE
     wemployeeid employees.employee_id%TYPE;
 BEGIN

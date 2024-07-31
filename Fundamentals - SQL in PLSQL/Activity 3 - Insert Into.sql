@@ -1,3 +1,5 @@
+--@Author: MaurosMJ
+
 DECLARE
     wfirstname     employees.first_name%TYPE;
     wlastname      employees.last_name%TYPE;

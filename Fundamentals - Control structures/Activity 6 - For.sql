@@ -1,3 +1,5 @@
+--@Author: MaurosMJ
+
 set serveroutput on;
 
 ACCEPT wqtdrepeticao PROMPT 'Repetir quantas vezes?';

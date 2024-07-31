@@ -1,3 +1,5 @@
+--@Author: MaurosMJ
+
 set serveroutput on;
 ACCEPT dept_id PROMPT 'Digite o Id do departamento:';
 

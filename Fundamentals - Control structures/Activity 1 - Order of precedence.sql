@@ -1,3 +1,5 @@
+--@Author: MaurosMJ
+
 DECLARE
     wnota1    NUMBER(4, 2);
     wnota2    NUMBER(4, 2);

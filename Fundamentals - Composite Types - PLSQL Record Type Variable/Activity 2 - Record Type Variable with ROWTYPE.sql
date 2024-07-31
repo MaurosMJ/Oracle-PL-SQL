@@ -1,3 +1,5 @@
+--@Author: MaurosMJ
+
 set verify off;
 set serverout on;
 ACCEPT p_emp_id PROMPT 'Informe o ID do funcionario:';
