@@ -20,7 +20,7 @@ alter procedure imprimemsg compile; --RECOMPILA A PROC
 
 accept p_msg prompt 'Digite uma mensagem:'
 begin
-imprimemsg('Olá teste');
+imprimemsg('&p_msg');
 end;
 
 drop procedure imprimemsg; --ELIMINA A PROC
