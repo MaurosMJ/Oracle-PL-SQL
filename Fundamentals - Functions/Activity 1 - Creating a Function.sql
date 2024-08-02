@@ -14,6 +14,13 @@ BEGIN
         employee_id = p_id_employee;
 
     RETURN w_salary;
+EXCEPTION
+    WHEN no_data_found THEN
+        raise_application_error(-20001, 'Não foi encontrado funcionario com esse ID');
+    WHEN OTHERS THEN
+        raise_application_error(-20002, 'Erro Oracle -'
+                                        || sqlcode
+                                        || sqlerrm);
 END;
 
 ALTER FUNCTION obter_salario_funcionario COMPILE;
