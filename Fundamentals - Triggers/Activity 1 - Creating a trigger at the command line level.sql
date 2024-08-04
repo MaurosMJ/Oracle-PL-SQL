@@ -1,6 +1,6 @@
 --@Author: MaurosMJ
 
-CREATE OR REPLACE TRIGGER validar_horario_trg BEFORE
+CREATE OR REPLACE TRIGGER b_i_validar_horario_s_trg BEFORE
     INSERT ON employees
 DECLARE BEGIN
     IF ( TRIM(to_char(sysdate, 'DAY')) IN ( 'SABADO', 'DOMINGO' ) OR TO_NUMBER(to_char(sysdate, 'HH24')) NOT BETWEEN 8 AND 18 ) THEN
