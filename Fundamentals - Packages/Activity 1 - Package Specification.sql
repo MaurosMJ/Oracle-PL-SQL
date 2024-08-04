@@ -1,3 +1,5 @@
+--@Author: MaurosMJ
+
 CREATE OR REPLACE PACKAGE employee_pck IS
     FUNCTION obter_salario_funcionario (
         p_employee_id IN employees.employee_id%TYPE
