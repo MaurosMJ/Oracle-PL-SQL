@@ -56,7 +56,6 @@ BEGIN
         :new.salary
     );
 
-    COMMIT;
 EXCEPTION
     WHEN OTHERS THEN
         raise_application_error(-20001, 'Erro Oracle - '
