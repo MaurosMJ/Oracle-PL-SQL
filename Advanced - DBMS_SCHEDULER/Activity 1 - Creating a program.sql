@@ -13,19 +13,15 @@ CREATE TABLE agenda (
 CREATE SEQUENCE agenda_seq START WITH 1 INCREMENT BY 1 NOCACHE NOMAXVALUE NOCYCLE;
 
 -- Criando uma procedure para ser utilizada no programa
-CREATE OR REPLACE PROCEDURE inserir_agenda_prc (
-    p_agenda_data IN agenda.agenda_data%TYPE
-) AS
+create or replace PROCEDURE inserir_agenda_prc AS
 BEGIN
     INSERT INTO agenda (
         agenda_id,
         agenda_data
     ) VALUES (
         agenda_seq.NEXTVAL,
-        p_agenda_data
+        SYSDATE
     );
-
-END;
 
 -- Criando um programa que chama a procedure
 BEGIN
