@@ -1,19 +1,33 @@
-desc inserir_funcionario; -- Parametros de um objeto (Ex: Function e Procedure)
+--@Author: MaurosMJ
 
-select object_name, object_type, last_ddl_time, timestamp, status from user_objects; -- OBJETOS DO USUARIO ATUAL;
-select object_name, object_type, last_ddl_time, timestamp, status from all_objects; --OBJETOS DO USER ATUAL E OBJETOS COM PRIVILEGIO DO USUARIO (Ex: Objetos Oracle);
-select object_name, object_type, last_ddl_time, timestamp, status from dba_objects; -- TODOS OBJETOS DA BASE (UTILIZAR USER 'SYS');
+/*
+User = Usuario atual
+All = Usuário atual e outros com privilégio
+Dba = DBA apenas
+*/
 
-select object_name, object_type, last_ddl_time, timestamp, status from user_objects where status = upper('INVALID'); -- OBJETOS INVALIDOS DO USUARIO ATUAL;
-select object_name, object_type, last_ddl_time, timestamp, status from all_objects where status = upper('INVALID'); --OBJETOS INVALIDOS DO USER ATUAL E OBJETOS COM PRIVILEGIO DO USUARIO (Ex: Objetos Oracle);
-select object_name, object_type, last_ddl_time, timestamp, status from dba_objects where status = upper('INVALID'); -- TODOS OBJETOS INVÁLIDOS NA BASE (UTILIZAR USER 'SYS');
+--Parametros de um objeto (Ex: Function e Procedure)
+desc inserir_funcionario;
 
-select name, type, line, position, text from user_errors; -- Erros encontrados em OBJETOS INVALIDOS DO USUARIO ATUAL;
-select owner, name, type, line, position, text from all_errors; -- Erros encontrados em OBJETOS INVALIDOS DO USER ATUAL E OBJETOS COM PRIVILEGIO DO USUARIO (Ex: Objetos Oracle);
-select owner, name, type, line, position, text from dba_errors; -- Erros encontrados em TODOS OBJETOS INVÁLIDOS NA BASE (UTILIZAR USER 'SYS');
+-- Mostra erros de compilação de um objeto
+show error procedure inserir_funcionario;
 
-select name, type, line, text from user_source where name = upper('OBTER_SALARIO_FUNCIONARIO'); -- CODIGO FONTE DE OBJETOS DO USUARIO ATUAL;
-select name, type, line, text from all_source where name = upper(''); -- CODIGO FONTE DE OBJETOS DO USER ATUAL E OBJETOS COM PRIVILEGIO DO USUARIO (Ex: Objetos Oracle);
-select name, type, line, text from dba_source where name = upper(''); -- CODIGO FONTE DE TODOS OBJETOS DA BASE (UTILIZAR USER 'SYS');
+--Lista de objetos
+select object_name, object_type, last_ddl_time, timestamp, status from user_objects;
+select object_name, object_type, last_ddl_time, timestamp, status from all_objects;
+select object_name, object_type, last_ddl_time, timestamp, status from dba_objects;
 
-show error procedure inserir_funcionario; -- Mostra erros de compilação de um objeto
+--Lista de objetos inválidos
+select object_name, object_type, last_ddl_time, timestamp, status from user_objects where status = upper('INVALID');
+select object_name, object_type, last_ddl_time, timestamp, status from all_objects where status = upper('INVALID');
+select object_name, object_type, last_ddl_time, timestamp, status from dba_objects where status = upper('INVALID');
+
+--Lista de erros em objetos inválidos
+select name, type, line, position, text from user_errors;
+select owner, name, type, line, position, text from all_errors;
+select owner, name, type, line, position, text from dba_errors;
+
+--Lista do código fonte dos objetos do banco de dados
+select name, type, line, text from user_source where name = upper('OBTER_SALARIO_FUNCIONARIO');
+select name, type, line, text from all_source where name = upper('');
+select name, type, line, text from dba_source where name = upper('');
