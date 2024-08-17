@@ -21,7 +21,7 @@ DECLARE
 BEGIN
 
 -- Voltando no tempo em 10 minutos:
-    dbms_flashback.enable_at_time(sysdate - 1200 / 1440);
+    dbms_flashback.enable_at_time(sysdate - 10 / 1440);
 
 -- Abre cursor, consulta tabela e atribui ao cursor os registros.
     OPEN c1;
