@@ -1,3 +1,5 @@
+--@Author: MaurosMJ
+
 --Inserindo alguma informação através do SQL (CLOB vazio)
 INSERT INTO jobs_resumes (
     job_id,
