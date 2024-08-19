@@ -5,7 +5,7 @@
 </div>
 
 
-### Fundamentals - Composite Types - PLSQL Record Type Variable
+### Fundamentals - SQL in PLSQL
 *
 *
 *
