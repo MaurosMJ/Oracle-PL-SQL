@@ -5,7 +5,7 @@
 </div>
 
 
-### Fundamentals - SQL in PLSQL
+### Advanced - LOBs (Large Objects)
 *
 *
 *
