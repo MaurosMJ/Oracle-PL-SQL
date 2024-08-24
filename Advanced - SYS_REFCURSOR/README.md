@@ -5,11 +5,10 @@
 </div>
 
 
-### Advanced - SYS_REFCURSOR
-*
-*
-*
-*
-*
-*
-*
+### SYS_REFCURSOR
+* `SYS_REFCURSOR` é declarado no pacote `STANDARD` (pacote default do PL/SQL).
+* É uma declaração "fraca" do tipo Cursor `IS REF CURSOR`.
+
+### SYS_REFCURSOR - Variável Cursor e Reference Cursor
+* Uma variável `Cursor` é uma variável que aponta para um `Cursor` ou para um `result set`.
+* Você pode passar uma variável `Cursor` como argumento para uma `procedure` ou `function`.
