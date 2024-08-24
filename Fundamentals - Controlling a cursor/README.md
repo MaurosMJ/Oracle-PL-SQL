@@ -24,7 +24,7 @@
 * O `CURSOR` marca a posição corrente no `result set`.
 
 <div style="text-align:center;">
-    <img src="https://imgur.com/XNIxHWJ.png" alt="Cursor 1 Logo" width="100" height="100">
+    <img src="https://imgur.com/XNIxHWJ.png" alt="Cursor 1 Logo">
 </div>
 
 * `DECLARE`: Deve ser feito o `SELECT`.
@@ -33,7 +33,7 @@
 * `CLOSE`: Libera recursos de memória do cursor (`result-set`).
 
 <div style="text-align:center;">
-    <img src="https://imgur.com/dcWelR2.png" alt="Cursor 2 Logo" width="100" height="100">
+    <img src="https://imgur.com/dcWelR2.png" alt="Cursor 2 Logo">
 </div>
 
 ### Controlando Cursor Explícito:
