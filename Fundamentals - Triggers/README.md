@@ -41,3 +41,36 @@
 | DML Trigger a nível de comando       | DML Trigger a nível de linha       |
 |----------------|----------------|
 | Executa o corpo da Trigger uma única vez, sempre que um determinado comando de manipulação de dados for emitado para uma determinada tabala.    | Executa o corpo da Trigger uma vez para cada linha da tabela afetada pelo comando de manipulação que causou o disparo da Trigger.    |
+
+### Database DML Triggers - Nivel de comando
+* Triggers a nível de comando podem ser disparadas antes ou depois da execução do comando.
+* Uma Trigger a nível de comando é disparada uma única vez, mesmo que várias linhas ou nenhuma linha sejam afetadas pelo comando.
+
+### Database DML Triggers - Nivel de linha
+* Triggers a nível de linha podem ser disparadas antes ou depois da manipulação da linha, para cada linha afetada pelo comando.
+* Se o comando não afetar nenhuma linha, a trigger a nível de linha não será disparada.
+
+### Database DML Triggers - Pseudo campos :OLD e :NEW
+* Dentro de triggers em nível de linha é possível referenciar os valores existentes antes da manipulação de valores através do qualificador :OLD, e os valores a serem aplicados pela manipulação de dados com o qualificador :NEW.
+* Os qualificadores :OLD e :NEW podem ainda ser substituídos por outros qualificadores através da cláusula opcional REFERENCING.
+
+| Operação       | Valor OLD.COLUNA       | Valor NEW.COLUNA |
+|----------------|----------------|----------------|
+| INSERT | NULL | Valor inserido para a coluna |
+| UPDATE | Valor da coluna antes do UPDATE | Valor da coluna aós o UPDATE |
+| DELETE | Valor da coluna antes do DELETE | NULL |
+
+### Mutating Tables
+* São chamadas Mutating Tables aquelas tabelas que estão sofrendo alterações durante a execução da Trigger.
+* A tabela á qual a trigger está associada é sempre uma Mutating Table, assim como qualquer tabela ligada á essa através de chave estrangeira.
+* Essas características impedem um conjunto de dados inconsistentes (alterados, mas não confirmados).
+
+### Regra 1 de Mutating Tables
+* Regra 1 de Mutating Tables: Não altere dados em colunas de chaves primárias, chaves estrangeiras ou chaves únicas de tabelas relacionadas áquela na qual a trigger disparada está associada.
+* Essa restrição é válida para todas triggers em nível de linha.
+* Essa restrição é válida para todas triggers em nível de comando disparada como resultado de uma operação DELETE CASCADE.
+
+### Regra 2 de Mutating Tables
+* Regra 2 de Mutating Tables: Não leia informações de tabelas que estejam sendo modificadas.
+* Essa restrição é válida para todas triggers em nível de linha.
+* Essa restrição é válida para todas triggers em nível de comando disparada como resultado de uma operação DELETE CASCADE.
