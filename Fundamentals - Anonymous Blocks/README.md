@@ -5,11 +5,10 @@
 </div>
 
 
-### Fundamentals - Anonymous Blocks
-*
-*
-*
-*
-*
-*
-*
+### Anonymous Blocks
+* Inicia com o `Declare` (Opcional):
+  * Contém variáveis e constantes. 
+* `Begin` (Obrigatório):
+  * Contém comandos SQL e PL/SQL que serão executadas no bloco.
+* `Exception` (Opcional):
+  * Contém as ações a serem executadas para tratamento das exceções que forem disparadas pelos comandos `BEGIN`. 
