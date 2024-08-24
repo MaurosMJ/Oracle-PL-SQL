@@ -5,11 +5,6 @@
 </div>
 
 
-### Advanced - UTL_FILE
-*
-*
-*
-*
-*
-*
-*
+### UTL_FILE
+* Os comandos necessários para o desenvolvimento de rotinas para ler e escrever dados em arquivos encontram-se na package UTL_FILE.
+* Disponível a partir da versão 7.3 do Oracle.
