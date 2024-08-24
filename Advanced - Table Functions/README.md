@@ -5,11 +5,6 @@
 </div>
 
 
-### Advanced - Table Functions
-*
-*
-*
-*
-*
-*
-*
+### Table Functions - Pipelined Functions
+* Utilizando Pipeline não há necessidade de criar grandes collections. 
+* Pipeline retorna as linhas para saída da função assim que são criadas, economizando memória e permitindo processamento subsequente iniciando logo após a linha ser gerada.
