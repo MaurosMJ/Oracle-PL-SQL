@@ -12,7 +12,6 @@
 </div>
   
 ## Índice
-## Índice
 1. [Variáveis](#variáveis)
 2. [Variáveis - Literal String](#variáveis---literal-string)
 3. [Variáveis - Declarando variáveis](#variáveis---declarando-variáveis)
