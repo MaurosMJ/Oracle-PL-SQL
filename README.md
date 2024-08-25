@@ -10,7 +10,40 @@
 <div style="text-align:center;">
     <img src="https://imgur.com/fKkDsks.png" alt="PLSQL1">
 </div>
-
+  
+## Índice
+1. [Oracle PL/SQL](#oracle-plsql)
+2. [Variáveis](#variáveis)
+3. [Variáveis - Literal String](#variáveis---literal-string)
+4. [Variáveis - Declarando variáveis](#variáveis---declarando-variáveis)
+5. [DataTypes](#datatypes)
+6. [DataTypes - Tipo NUMBER](#datatypes---tipo-number)
+7. [DataTypes - Tipo CHAR](#datatypes---tipo-char)
+8. [DataTypes - Tipo VARCHAR2](#datatypes---tipo-varchar2)
+9. [DataTypes - Tipo BOOLEAN](#datatypes---tipo-boolean)
+10. [DataTypes - Tipo LONG e LONG RAW](#datatypes---tipo-long-e-long-raw)
+11. [DataTypes - Tipo DATE](#datatypes---tipo-date)
+12. [DataTypes - Tipo TIMESTAMP](#datatypes---tipo-timestamp)
+13. [DataTypes - Tipo TIMESTAMP with TIMEZONE](#datatypes---tipo-timestamp-with-timezone)
+14. [DataTypes - NCHAR e NVARCHAR2](#datatypes---nchar-e-nvarchar2)
+15. [DataTypes - BINARY_INTEGER](#datatypes---binary_integer)
+16. [DataTypes - Regra de nomenclatura](#datatypes---regra-de-nomenclatura)
+17. [DataTypes - Atribuindo valores para variáveis](#datatypes---atribuindo-valores-para-variáveis)
+18. [DataTypes - Declarando variáveis utilizando %TYPE](#datatypes---declarando-variáveis-utilizando-type)
+19. [DataTypes - Variável BIND](#datatypes---variável-bind)
+20. [DataTypes - Referenciando variáveis BIND](#datatypes---referenciando-variáveis-bind)
+21. [DataTypes - Comentando o código](#datatypes---comentando-o-código)
+22. [Utilizando funções no bloco PL/SQL](#utilizando-funções-no-bloco-plsql)
+23. [DataTypes - Funções de conversão de tipos](#datatypes---funções-de-conversão-de-tipos)
+24. [DataTypes - Blocos Aninhados](#datatypes---blocos-aninhados)
+25. [DataTypes - Escopo de Identificadores](#datatypes---escopo-de-identificadores)
+26. [Padrões de Código - Convenções de Codificação](#padrões-de-código---convenções-de-codificação)
+27. [Padrões de Código - Convenções de Nomenclatura](#padrões-de-código---convenções-de-nomenclatura)
+28. [Savepoints](#savepoints)
+29. [ROLLBACK to SAVEPOINT no PL/SQL](#rollback-to-savepoint-no-plsql)
+30. [Cursor Implícito](#cursor-implícito)
+31. [Cursor Implícito - Atributos](#cursor-implícito---atributos)
+  
 | Comando | Descrição |
 |---------|----------------|
 | **DML** (Data Manipulation Language) | Conjunto de comandos usados para manipular dados em tabelas. Exemplos incluem `INSERT`, `UPDATE`, `DELETE`, e `SELECT`. |
@@ -18,7 +51,7 @@
 | **DCL** (Data Control Language)      | Conjunto de comandos usados para controlar o acesso ao banco de dados e seus objetos. Exemplos incluem `GRANT` e `REVOKE`. |
 | **TCL** (Transaction Control Language) | Conjunto de comandos usados para gerenciar transações no banco de dados. Exemplos incluem `COMMIT`, `ROLLBACK`, e `SAVEPOINT`. |
 | **DQL** (Data Query Language)        | Subconjunto de DML que se refere exclusivamente à consulta de dados. O principal comando é o `SELECT`. |
-
+  
 ### Variáveis
 * Você pode criar identificadores quando define um componente de programa.
 * Variáveis definidas pelo usuário devem ter no máximo 30 caracteres e iniciar com uma letra (podem incluir `$`, `#`, ou `_`).
